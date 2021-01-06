@@ -40,6 +40,8 @@ python3 custom_crypto.py -path my_plain_shellcode.bin
 This will compile the C++ file for you with default options for key length and split_shellcode, and will also create an encrypted .bin file under "encrypted.bin."
 
 ### Decryption
+WARNING: I know custom_decrypt.cpp looks like it has a lot of empty space, but that is intentional!!! DO NOT remove the extra space between sections, it is designed to make sure python never overwrites anything important!
+
 The C++ code, once compiled, will handle decryption for you.  It locally injects with a very basic set of Win32 APIs, I recommend you change this method for real operations.
 
 The Python decryptor code is contained in custom_crypto_decrypt.py.  The usage looks like:
