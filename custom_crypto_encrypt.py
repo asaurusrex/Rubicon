@@ -288,7 +288,7 @@ def write_compile_file(shellcode_list, compile_file, shellcode_total_length, key
                 section_size = key_total
 
                 for x in range(number_sections):
-                    key_index = x % len(key)
+                    key_index = x % (int(len(key)/4))
                     if x != 0: 
                         if x == 1:
                             section_size += key_total
