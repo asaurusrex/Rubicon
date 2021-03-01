@@ -941,7 +941,7 @@ std::copy(section_38_decrypted.begin(), section_38_decrypted.end(), std::back_in
 	/* This can be used to generate the .bin file for debugging purposes, to see if it matches the original shellcode
 	ofstream fout;
 	fout.open("C:\\Dev\\file.bin", ios::binary | ios::out);
-	fout.write((const char*)code_decrypt, 201308);
+	fout.write((const char*)code_decrypted.data(), 201308);
 	fout.close();
 	*/
 
